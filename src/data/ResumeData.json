@@ -1,0 +1,99 @@
+{
+    "name": "Maroof Ali Syed",
+    "title": "Full Stack Developer",
+    "contact": {
+        "location": "Delhi",
+        "phone": "9305956819",
+        "email": "maroofali688@gmail.com",
+        "linkedin": "http://www.linkedin.com/in/maroofalysyed",
+        "github": "https://github.com/maroofinagit"
+    },
+    "summaryBig": "Full Stack Developer pursuing MCA at Jamia Millia Islamia, experienced in building clean, responsive applications with modern frameworks, APIs, and databases. Skilled at managing both frontend and backend development, ensuring clarity, scalability, reliability, and performance in every project. Passionate about problem-solving, with skills refined through extensive DSA practice, while continuously learning new technologies and creating impactful, high-quality web solutions.",
+    "summarySmall": "Full Stack Developer pursuing MCA at Jamia Millia Islamia, experienced in building clean, responsive applications with modern frameworks, APIs, and databases. Skilled at managing both frontend and backend development, ensuring clarity, scalability, reliability, and performance in every project.",
+    "education": [
+        {
+            "degree": "M.C.A - Masters in Computer Application",
+            "institution": "Jamia Millia Islamia, New Delhi",
+            "duration": "August 2024 - ongoing"
+        },
+        {
+            "degree": "B.C.A. Hons - Bachelors in Computer Application",
+            "institution": "Bundelkhand University, Jhansi",
+            "duration": "November 2020 - July 2023"
+        }
+    ],
+    "technical_skills": {
+        "full_stack": [
+            "Next.js",
+            "MongoDB",
+            "Express.js",
+            "React",
+            "Node.js",
+            "UI/UX"
+        ],
+        "frontend_ui_ux": [
+            "Tailwind CSS",
+            "Shadcn/UI",
+            "GSAP",
+            "Framer Motion",
+            "Three.js"
+        ],
+        "backend_databases": [
+            "PrismaORM",
+            "PostgreSQL",
+            "NextAuth",
+            "MongoDB",
+            "SQL",
+            "APIs"
+        ],
+        "programming": [
+            "Java",
+            "DSA",
+            "JavaScript",
+            "C",
+            "C++"
+        ],
+        "devops": [
+            "Git",
+            "GitHub",
+            "Docker",
+            "SEO"
+        ]
+    },
+    "projects": [
+        {
+            "title": "Motioned Interactive Personal Portfolio Web App",
+            "description": "Built a 3D portfolio with dynamic content via SanityIO and multiple profiles. Integrated Three.js, GSAP, and Framer Motion for immersive 3D animations and smooth transitions.",
+            "tech_used": [
+                "Next.js",
+                "Tailwind CSS",
+                "SanityIO",
+                "Three.js",
+                "GSAP",
+                "Framer Motion"
+            ],
+            "repository": "https://github.com/maroofinagit/portfoliomaroof",
+            "preview": "#",
+            "image": "https://via.placeholder.com/600x400"
+        },
+        {
+            "title": "E-commerce Web App with CMS",
+            "description": "Built a responsive e-commerce app with CMS for managing products and categories. Optimized UI for UX and SEO to enhance performance and visibility.",
+            "tech_used": [
+                "Next.js",
+                "PrismaORM",
+                "MongoDB",
+                "Tailwind CSS"
+            ],
+            "repository": "https://github.com/maroofinagit/Ecommerce",
+            "preview": "#",
+            "image": "https://via.placeholder.com/600x400"
+        }
+    ],
+    "additional_skills": [
+        "Graphic designing",
+        "Photography",
+        "Content Writing",
+        "Proficient in English, Urdu and Hindi"
+    ]
+}
