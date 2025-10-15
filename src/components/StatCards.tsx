@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
 const stats = [
-    { number: 3, label: "Years of Experience", image: "/coding.jpg" },
-    { number: 25, label: "Completed Projects", image: "/projects.jpg" },
+    { number: 2, label: "Years of Experience", image: "/coding.jpg" },
+    { number: 3, label: "Ongoing Projects", image: "/projects.jpg" },
     { number: 10, label: "Technologies Mastered", image: "/technology.jpg" },
-    { number: 500, label: "DSA Problems Solved", image: "/dsa.jpg" },
+    { number: 200, label: "DSA Problems Solved", image: "/dsa.jpg" },
 ];
 
 const StatsCards: React.FC = () => {
