@@ -25,7 +25,7 @@ const timelineData = [
     {
         type: "experience",
         title: "Freelance Web Developer",
-        place: "Self-employed",
+        place: "Freelancer, Upwork, PeoplePerHour",
         duration: "2022 - Present",
     },
 ];
