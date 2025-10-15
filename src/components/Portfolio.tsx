@@ -21,10 +21,10 @@ const projects = [
   {
     title: "Motioned Interactive Personal Portfolio Web App",
     description:
-      "Built a 3D portfolio with dynamic content via SanityIO and multiple profiles. Integrated Three.js, GSAP, and Framer Motion for immersive 3D animations and smooth transitions.",
+      "Built a 3D portfolio with dynamic content via SanityIO and multiple profiles. Integrated Framer Motion for immersive animations and smooth transitions.",
     image: "/portfolioimg.jpg",
-    tech: ["Next.js", "Tailwind CSS", "SanityIO", "Three.js", "GSAP", "Framer Motion"],
-    repo: "https://github.com/maroofinagit/portfoliomaroof",
+    tech: ["Next.js", "Tailwind CSS", "SanityIO", "Framer Motion"],
+    repo: "https://github.com/maroofinagit/maroof_portfolio",
   },
   {
     title: "E-commerce Web App with CMS",

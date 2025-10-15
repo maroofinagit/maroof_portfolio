@@ -26,21 +26,6 @@ export default function DockNavbar() {
   // Detect if current route is part of the writer section
   const isWriterPage = pathname.startsWith("/writer");
 
-  // Default select value based on current route
-  // Keep track of which role is selected
-  // const [selectedRole, setSelectedRole] = useState("techie");
-
-  // Update select value whenever pathname changes
-  // useEffect(() => {
-  //   if (pathname.startsWith("/writer")) {
-  //     setSelectedRole("writer");
-  //   } else if (pathname.startsWith("/techie")) {
-  //     setSelectedRole("techie");
-  //   } else {
-  //     setSelectedRole("")
-  //   }
-  // }, [pathname]);
-
   // === Derive role directly from pathname ===
   const selectedRole = pathname.startsWith("/writer")
     ? "writer"
