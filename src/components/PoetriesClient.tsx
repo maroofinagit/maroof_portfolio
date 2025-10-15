@@ -52,88 +52,99 @@ export default function PoetriesClient({ poetries }: PoetriesListProps) {
                 My Poetries
             </motion.h1>
 
-            {/* Tag Filter */}
-            <motion.div
-                className="flex flex-wrap justify-center gap-3 mb-14"
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-            >
-                {allTags.map(tag => (
-                    <motion.button
-                        key={tag}
-                        onClick={() => setSelectedTag(tag)}
-                        variants={buttonVariants}
-                        whileHover="hover"
-                        whileTap="tap"
-                        className={`px-4 py-1.5 text-sm md:text-base rounded-full border transition-all duration-300 backdrop-blur-md font-medium
-              ${selectedTag === tag
-                                ? "bg-[#703c00] text-white border-transparent shadow-md"
-                                : "bg-white/50 text-[#733f01] border-white/30 hover:bg-white/50 hover:shadow-sm"
-                            }`}
+            {poetries.length > 0 ?
+                <>
+
+                    {/* Tag Filter */}
+                    <motion.div
+                        className="flex flex-wrap justify-center gap-3 mb-14"
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.8 }}
                     >
-                        {tag.charAt(0).toUpperCase() + tag.slice(1)}
-                    </motion.button>
-                ))}
-            </motion.div>
+                        {allTags.map(tag => (
+                            <motion.button
+                                key={tag}
+                                onClick={() => setSelectedTag(tag)}
+                                variants={buttonVariants}
+                                whileHover="hover"
+                                whileTap="tap"
+                                className={`px-4 py-1.5 text-sm md:text-base rounded-full border transition-all duration-300 backdrop-blur-md font-medium
+              ${selectedTag === tag
+                                        ? "bg-[#703c00] text-white border-transparent shadow-md"
+                                        : "bg-white/50 text-[#733f01] border-white/30 hover:bg-white/50 hover:shadow-sm"
+                                    }`}
+                            >
+                                {tag.charAt(0).toUpperCase() + tag.slice(1)}
+                            </motion.button>
+                        ))}
+                    </motion.div>
 
-            {/* Poetry Cards */}
-            <motion.div
-                className="flex flex-col md:flex-row md:flex-wrap gap-8 max-w-6xl mx-auto mt-10"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-            >
-                <AnimatePresence>
-                    {filteredPoetries.map((poem, index) => (
-                        <motion.div
-                            key={poem._id}
-                            layout
-                            variants={cardVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            exit="exit"
-                            className="relative flex flex-col justify-between w-full md:w-[48%] p-7 rounded-2xl border border-[#E0D4B7] shadow-inner backdrop-blur-md bg-white/60 hover:bg-white/70 transition-all duration-300"
-                        >
-                            <FaFeatherAlt size={25} className="text-[#825217] absolute top-5 right-5" />
-
-                            {index === 0 && (
-                                <span className="w-fit mb-2 text-xs backdrop-blur-xs font-semibold bg-amber-800 text-white px-2 py-1 rounded-md shadow">
-                                    Latest
-                                </span>
-                            )}
-
-                            <h2 className="text-2xl md:text-3xl font-semibold mb-3 text-[#733f01]">{poem.title}</h2>
-
-                            <p className={`text-base md:text-lg ml-3 leading-relaxed mb-6 font-medium text-[#3E2C18]/90 ${fContent.className}`}>
-                                {`"${poem.content.split("\n")[0]?.trim() || poem.content.slice(0, 80)}..."`}
-                            </p>
-
-                            <div className="flex flex-wrap gap-2 mb-5">
-                                {poem.tags?.map(tag => (
-                                    <span
-                                        key={tag}
-                                        className="text-xs font-medium px-3 py-1 rounded-md bg-[#a57400]/70 border-[#e7a200] text-white"
-                                    >
-                                        #{tag}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <Link href={`/writer/poetries/${poem.slug.current}`}>
-                                <motion.button
-                                    variants={buttonVariants}
-                                    whileHover="hover"
-                                    whileTap="tap"
-                                    className="self-start px-4 py-2 border border-[#703c00] text-[#703c00] rounded-full text-sm font-semibold hover:bg-[#703c00] hover:text-white transition-all duration-300 shadow"
+                    {/* Poetry Cards */}
+                    <motion.div
+                        className="flex flex-col md:flex-row md:flex-wrap gap-8 max-w-6xl mx-auto mt-10"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        <AnimatePresence>
+                            {filteredPoetries.map((poem, index) => (
+                                <motion.div
+                                    key={poem._id}
+                                    layout
+                                    variants={cardVariants}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    exit="exit"
+                                    className="relative flex flex-col justify-between w-full md:w-[48%] p-7 rounded-2xl border border-[#E0D4B7] shadow-inner backdrop-blur-md bg-white/60 hover:bg-white/70 transition-all duration-300"
                                 >
-                                    Read Full →
-                                </motion.button>
-                            </Link>
-                        </motion.div>
-                    ))}
-                </AnimatePresence>
-            </motion.div>
+                                    <FaFeatherAlt size={25} className="text-[#825217] absolute top-5 right-5" />
+
+                                    {index === 0 && (
+                                        <span className="w-fit mb-2 text-xs backdrop-blur-xs font-semibold bg-amber-800 text-white px-2 py-1 rounded-md shadow">
+                                            Latest
+                                        </span>
+                                    )}
+
+                                    <h2 className="text-2xl md:text-3xl font-semibold mb-3 text-[#733f01]">{poem.title}</h2>
+
+                                    <p className={`text-base md:text-lg ml-3 leading-relaxed mb-6 font-medium text-[#3E2C18]/90 ${fContent.className}`}>
+                                        {`"${poem.content.split("\n")[0]?.trim() || poem.content.slice(0, 80)}..."`}
+                                    </p>
+
+                                    <div className="flex flex-wrap gap-2 mb-5">
+                                        {poem.tags?.map(tag => (
+                                            <span
+                                                key={tag}
+                                                className="text-xs font-medium px-3 py-1 rounded-md bg-[#a57400]/70 border-[#e7a200] text-white"
+                                            >
+                                                #{tag}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    <Link href={`/writer/poetries/${poem.slug.current}`}>
+                                        <motion.button
+                                            variants={buttonVariants}
+                                            whileHover="hover"
+                                            whileTap="tap"
+                                            className="self-start cursor-pointer px-4 py-2 border border-[#703c00] text-[#703c00] rounded-full text-sm font-semibold hover:bg-[#703c00] hover:text-white transition-all duration-300 shadow"
+                                        >
+                                            Read Full →
+                                        </motion.button>
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </motion.div>
+                </>
+                :
+                <div>
+                    <p className=" text-center md:text-xl font-medium">No poetries found</p>
+                </div>
+
+            }
+
         </section>
     );
 }

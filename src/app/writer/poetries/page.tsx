@@ -1,17 +1,19 @@
 // app/writer/poetries/page.tsx
 import PoetriesClient from "@/components/PoetriesClient";
+import { client } from "@/lib/sanity";
 import { Poetry } from "@/types/poetry";
 
+export const revalidate = 60;
+
 export default async function PoetriesPage() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  const res = await fetch(`${baseUrl}/api/poetries`, {
-    next: { revalidate: 60 }, // cache for 1 minute
-  });
+  const query = `*[_type=="poetry"] | order(date desc){
+        _id, title,slug, content, meanings, tags, date
+      }`;
 
-  if (!res.ok) throw new Error("Failed to fetch poetries");
+  const poetries: Poetry[] = await client.fetch(query);
+  console.log(poetries);
 
-  const poetries: Poetry[] = await res.json();
 
   return <PoetriesClient poetries={poetries} />;
 }

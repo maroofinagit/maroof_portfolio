@@ -1,19 +1,23 @@
 // app/writer/blogs/page.tsx
 import BlogsList from "@/components/BlogsClient";
+import { client } from "@/lib/sanity";
 import { Blog } from "@/types/blog";
 
+export const revalidate = 60;
+
 export default async function BlogsPage() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  const res = await fetch(`${baseUrl}/api/blogs`, {
-    next: { revalidate: 60 }, // cache 1 minute
-  });
+  const query = `*[_type == "blog"]{
+      _id,
+      title,
+      desc,
+      slug,
+      date,
+      "cover": cover.asset->url,
+      tags
+    } | order(date desc)`
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch blogs");
-  }
-
-  const blogs: Blog[] = await res.json();
+  const blogs: Blog[] = await client.fetch(query)
 
   return <BlogsList blogs={blogs} />;
 }

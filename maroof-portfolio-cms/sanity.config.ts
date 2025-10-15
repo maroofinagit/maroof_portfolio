@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'maroof-portfolio-cms',
 
-  projectId: 'q9008yu1',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],

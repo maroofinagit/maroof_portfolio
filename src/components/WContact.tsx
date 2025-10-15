@@ -43,10 +43,9 @@ export default function Contact() {
                 toast.success("Messege sent successfully")
                 setFormData({ name: "", email: "", message: "" });
             } else {
-                alert("Failed to send message. Try again.");
+                toast.error("Error sending message.")
             }
         } catch (err) {
-            console.error(err);
             toast.error("Error sending message.");
         } finally {
             setLoading(false);
@@ -140,8 +139,8 @@ export default function Contact() {
                 <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.03 }}>
                     <Button
                         type="submit"
-                        disabled={isDisabled}
-                        className={`w-full font-medium py-3 rounded-lg transition-all duration-300 text-lg font-serif ${isDisabled
+                        disabled={isDisabled || loading}
+                        className={`w-full cursor-pointer font-medium py-3 rounded-lg transition-all duration-300 text-lg font-serif ${isDisabled
                             ? "bg-[#f2e8d0] border border-[#c5b692] text-[#9c8c76] cursor-not-allowed"
                             : "bg-[#c5a86a] hover:bg-[#b69557] text-white shadow-md"
                             }`}
