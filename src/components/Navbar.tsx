@@ -28,16 +28,26 @@ export default function DockNavbar() {
 
   // Default select value based on current route
   // Keep track of which role is selected
-  const [selectedRole, setSelectedRole] = useState("techie");
+  // const [selectedRole, setSelectedRole] = useState("techie");
 
   // Update select value whenever pathname changes
-  useEffect(() => {
-    if (pathname.startsWith("/writer")) {
-      setSelectedRole("writer");
-    } else {
-      setSelectedRole("techie");
-    }
-  }, [pathname]);
+  // useEffect(() => {
+  //   if (pathname.startsWith("/writer")) {
+  //     setSelectedRole("writer");
+  //   } else if (pathname.startsWith("/techie")) {
+  //     setSelectedRole("techie");
+  //   } else {
+  //     setSelectedRole("")
+  //   }
+  // }, [pathname]);
+
+  // === Derive role directly from pathname ===
+  const selectedRole = pathname.startsWith("/writer")
+    ? "writer"
+    : pathname.startsWith("/techie")
+      ? "techie"
+      : "techie"; // default to techie
+
 
   // Handle switching between writer & techie
   const handleRoleChange = (value: string) => {
@@ -98,7 +108,7 @@ export default function DockNavbar() {
           </Link>
 
           <div className="no-cursor">
-            <Select defaultValue={selectedRole} onValueChange={handleRoleChange}>
+            <Select value={selectedRole} onValueChange={handleRoleChange}>
               <SelectTrigger
                 className={`no-cursor w-[130px] md:w-[140px]
                   ${isWriterPage

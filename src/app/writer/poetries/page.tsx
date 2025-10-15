@@ -12,8 +12,6 @@ export default async function PoetriesPage() {
       }`;
 
   const poetries: Poetry[] = await client.fetch(query);
-  console.log(poetries);
-
 
   return <PoetriesClient poetries={poetries} />;
 }

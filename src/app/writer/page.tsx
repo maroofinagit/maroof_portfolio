@@ -8,7 +8,7 @@ const writerNavLinks = [
     { name: "Home", href: "/" },
     { name: "Blogs", href: "#blogs" },
     { name: "Poetry", href: "writer/poetries" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "#wcontact" },
 ];
 
 export default function HomePage() {
