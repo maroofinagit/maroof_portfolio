@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   title: "Maroof Ali Syed | Portfolio",
   description: "Portfolio of Maroof Ali Syed - Full-Stack Developer, UI/UX Designer, Writer, and Photographer.",
   openGraph: {
-    title: "Maroof Ali Syed — Full-Stack Developer | Writer",
+  title: "Maroof Ali Syed | Portfolio",
     description:
-      "Explore my projects, writings, and creative space — all in one portfolio.",
+      "Explore my projects, writings, and creative space all in one portfolio.",
     url: "https://maroofalysyed.vercel.app/",
     siteName: "Maroof Ali Syed Portfolio",
     images: [
