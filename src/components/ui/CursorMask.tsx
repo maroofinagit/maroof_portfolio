@@ -44,8 +44,8 @@ export default function CursorMask() {
 
         // Scale/unblur cursor on text, buttons, images, SVGs
         setIsTextHover(
-          el.matches("p, h1, h2, h3, h4, h5, h6, span, a, img, button, svg , input , textarea") ||
-          el.closest("p, h1, h2, h3, h4, h5, h6, span, a, img, button, svg , input, textarea") !== null
+          el.matches("p, h1, h2, h3, h4, h5, h6, span, a, img, button, svg , input , textarea, blockquote, figcaption") ||
+          el.closest("p, h1, h2, h3, h4, h5, h6, span, a, img, button, svg , input, textarea, blockquote, figcaption") !== null
         );
       } else {
         setIsHidden(false);
