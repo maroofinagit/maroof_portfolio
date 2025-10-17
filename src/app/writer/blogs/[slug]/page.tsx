@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     return {
         title: "Maroof Ali Syed | Portfolio",
-        description: "Portfolio of Maroof Ali Syed - Full-Stack Developer, UI/UX Designer, Writer, and Photographer.",
+        description: "Portfolio of Maroof Ali Syed - Full-Stack Developer, writer and UI/UX Designer.",
         openGraph: {
             title: `${blog.title} - by Maroof Ali Syed | Portfolio`,
-            description: "Portfolio of Maroof Ali Syed - Full-Stack Developer, UI/UX Designer, Writer, and Photographer.",
+            description: "Portfolio of Maroof Ali Syed - Full-Stack Developer, writer and UI/UX Designer.",
             url: "https://maroofalysyed.vercel.app/maroof.jpg",
             images: [
                 {
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         twitter: {
             card: "summary_large_image",
             title: `${blog.title} - by Maroof Ali Syed | Portfolio`,
-            description: "Portfolio of Maroof Ali Syed - Full-Stack Developer, UI/UX Designer, Writer, and Photographer.",
+            description: "Portfolio of Maroof Ali Syed - Full-Stack Developer, writer and UI/UX Designer.",
             images: ["https://maroofalysyed.vercel.app/maroof.jpg"],
         },
     };
