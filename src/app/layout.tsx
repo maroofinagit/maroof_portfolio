@@ -18,6 +18,30 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Maroof Ali Syed | Portfolio",
   description: "Portfolio of Maroof Ali Syed - Full-Stack Developer, UI/UX Designer, Writer, and Photographer.",
+  openGraph: {
+    title: "Maroof Ali Syed — Full-Stack Developer | Writer",
+    description:
+      "Explore my projects, writings, and creative space — all in one portfolio.",
+    url: "https://maroofalysyed.vercel.app/",
+    siteName: "Maroof Ali Syed Portfolio",
+    images: [
+      {
+        url: "https://maroofalysyed.vercel.app/maroof.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Maroof Ali Syed Portfolio Preview",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maroof Ali Syed — Web Developer & Writer",
+    description:
+      "A creative portfolio featuring projects, blogs, and poetries.",
+    images: ["https://maroofalysyed.vercel.app/maroof.jpg"],
+  },
 };
 
 export default function RootLayout({
