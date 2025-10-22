@@ -140,7 +140,9 @@ const Footer = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
             >
-                © {year ?? ""} Maroof Ali Syed. All rights reserved.
+                <span>
+                    © {year ?? ""} Maroof Ali Syed. All rights reserved.
+                </span>
             </motion.div>
         </footer>
     );

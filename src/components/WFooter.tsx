@@ -117,7 +117,9 @@ const WFooter = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
             >
-                © {year ?? ""} Maroof Ali Syed. Words woven with heartbeats.
+                <span>
+                    © {year ?? ""} Maroof Ali Syed. Words woven with heartbeats.
+                </span>
             </motion.div>
         </footer>
     );
