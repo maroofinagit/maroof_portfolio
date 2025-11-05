@@ -20,14 +20,14 @@ const upcomingBooks = [
         description:
             "A novel which explores the idea of divine blessing through a modern love story where a girl enters a boy’s life not as a distraction, but as barkat turning his restlessness into peace and his ordinary days into grace",
         status: "Writing in progress",
-        release: "Expected Summer 2026",
+        release: "Expected Monsoon 2026",
         cover: "/barkatcover.jpg",
     },
     {
         title: "Jaiza",
         description: "“Jaiza” ~ A poetry collection that explores the idea of self-reflection through verses woven with love, loss, and faith where every poem becomes a mirror, turning silence into meaning and ordinary emotions into grace.",
         status: "Editing phase",
-        release: "Expected Winter 2025",
+        release: "Expected Spring 2026",
         cover: "/jaizacover.jpg",
     },
 ];
@@ -42,7 +42,7 @@ const promoPoetry = [
     {
         book: "Jaiza",
         content: `Baad din bhar roze ke niwale cheen liye mun se,
-                Ab dawat bhi mil jaye pr bhook kaha se lagegi...`
+                Ab dawat bhi mil jaye pr bhook kahaan se lagegi...`
     },
 ]
 
