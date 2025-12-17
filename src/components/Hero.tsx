@@ -132,7 +132,7 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
             src="/me.jpg"
-            alt="Maroof"
+            alt="Maroof Picture"
             className="w-72 md:w-96 aspect-square object-cover rounded-full shadow-lg border-4 border-white/30"
           />
         </div>
