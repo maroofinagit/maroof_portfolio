@@ -24,7 +24,8 @@ const projects = [
       "Developed an AI-driven study tracker that generates personalized study plans and monitors progress. Utilized OpenAI for content generation and Next.js for a seamless user experience.",
     image: "/prepmate.jpg",
     tech: ["Next.js", "OpenAI and Gemeni API", "Tailwind CSS", "PostgreSQL", "PrismaORM",],
-    repo: "https://github.com/maroofinagit/prepmate"
+    repo: "https://github.com/maroofinagit/prepmate",
+    url: "https://useprepmate.vercel.app"
   },
   {
     title: "Motioned Interactive Personal Portfolio Web App",
@@ -33,6 +34,7 @@ const projects = [
     image: "/portfolioimg.jpg",
     tech: ["Next.js", "Tailwind CSS", "SanityIO", "Framer Motion"],
     repo: "https://github.com/maroofinagit/maroof_portfolio",
+    url: "https://maroofalysyed.vercel.app"
   },
   {
     title: "E-commerce Web App with CMS",
@@ -41,6 +43,7 @@ const projects = [
     image: "/storepage.jpg",
     tech: ["Next.js", "PrismaORM", "MongoDB", "Tailwind CSS"],
     repo: "https://github.com/maroofinagit/Ecommerce",
+    url: "https://github.com/maroofinagit/Ecommerce"
   },
 ];
 
