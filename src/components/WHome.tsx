@@ -6,7 +6,6 @@ import {
     FaFeatherAlt,
     FaQuoteLeft,
     FaQuoteRight,
-    FaPenNib,
 } from "react-icons/fa";
 import { MdPushPin } from "react-icons/md";
 import { Sorts_Mill_Goudy, Cinzel } from 'next/font/google'

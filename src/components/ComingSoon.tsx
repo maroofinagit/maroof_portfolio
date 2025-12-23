@@ -6,8 +6,7 @@ import { FaBookOpen, FaPenNib } from "react-icons/fa";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Montserrat } from "next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay, EffectFade } from "swiper/modules";
-// import "swiper/css";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 
 const montserrat = Montserrat({

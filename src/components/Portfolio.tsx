@@ -19,20 +19,20 @@ import { GrView } from "react-icons/gr";
 
 const projects = [
   {
-    title: "Motioned Interactive Personal Portfolio Web App",
-    description:
-      "Built a 3D portfolio with dynamic content via SanityIO and multiple profiles. Integrated Framer Motion for immersive animations and smooth transitions.",
-    image: "/portfolioimg.jpg",
-    tech: ["Next.js", "Tailwind CSS", "SanityIO", "Framer Motion"],
-    repo: "https://github.com/maroofinagit/maroof_portfolio",
-  },
-  {
     title: "AI-Powered Auto Study Preparation Tracker",
     description:
       "Developed an AI-driven study tracker that generates personalized study plans and monitors progress. Utilized OpenAI for content generation and Next.js for a seamless user experience.",
     image: "/prepmate.jpg",
     tech: ["Next.js", "OpenAI and Gemeni API", "Tailwind CSS", "PostgreSQL", "PrismaORM",],
     repo: "https://github.com/maroofinagit/prepmate"
+  },
+  {
+    title: "Motioned Interactive Personal Portfolio Web App",
+    description:
+      "Built a 3D portfolio with dynamic content via SanityIO and multiple profiles. Integrated Framer Motion for immersive animations and smooth transitions.",
+    image: "/portfolioimg.jpg",
+    tech: ["Next.js", "Tailwind CSS", "SanityIO", "Framer Motion"],
+    repo: "https://github.com/maroofinagit/maroof_portfolio",
   },
   {
     title: "E-commerce Web App with CMS",
