@@ -213,7 +213,7 @@ export default function ProjectSection() {
                       </a>
 
                       <a
-                        href={project.repo}
+                        href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
