@@ -11,21 +11,21 @@ const reviews = [
     {
         name: "Adiba fatma",
         username: "@adibafatma",
-        body: "I've never seen anything like this before. It's amazing. I love it.",
+        body: "His work is always impressive and beyond expectations. I love it.",
         img: "/adibafatma.jpg",
         rating: 5,
     },
     {
         name: "Zaki Nafees",
         username: "@zakinafees",
-        body: "This is really amazing work. Hatts off !",
+        body: "Good attention to detail. The final product exceeded my expectations.",
         img: "/zakinafees.jpg",
         rating: 4.5,
     },
     {
         name: "Mohd Sohail",
         username: "@mohdsohail",
-        body: "I'm at a loss for words. This is amazing. I love it.",
+        body: "Truly exceptional work! I am thoroughly impressed with the quality and dedication shown.",
         img: "/mohdsohail.jpg",
         rating: 4,
     },
@@ -39,7 +39,7 @@ const reviews = [
     {
         name: "Mohd Shonez",
         username: "@mohdshonez",
-        body: "Great service and amazing quality! Highly recommend. I will definitely be back!",
+        body: "Great service and amazing quality! Highly recommended.",
         img: "/mohdshonez.jpg",
         rating: 5,
     },

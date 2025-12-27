@@ -23,8 +23,8 @@ const upcomingBooks = [
         cover: "/barkatcover.jpg",
     },
     {
-        title: "Jaiza",
-        description: "“Jaiza” ~ A poetry collection that explores the idea of self-reflection through verses woven with love, loss, and faith where every poem becomes a mirror, turning silence into meaning and ordinary emotions into grace.",
+        title: "Jayeza",
+        description: "“Jayeza” ~ A poetry collection that explores the idea of self-reflection through verses woven with love, loss, and faith where every poem becomes a mirror, turning silence into meaning and ordinary emotions into grace.",
         status: "Editing phase",
         release: "Expected Spring 2026",
         cover: "/jaizacover.jpg",
@@ -33,13 +33,13 @@ const upcomingBooks = [
 
 const promoPoetry = [
     {
-        book: "Jaiza",
+        book: "Jayeza",
         content: `Jin dars-gahon m kiya dakhila jauhar e qabiliyat ke khatir,
         Inhi idaron n mera hunar maar diya...`,
 
     },
     {
-        book: "Jaiza",
+        book: "Jayeza",
         content: `Baad din bhar roze ke niwale cheen liye mun se,
                 Ab dawat bhi mil jaye pr bhook kahaan se lagegi...`
     },
