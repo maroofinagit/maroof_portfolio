@@ -51,6 +51,7 @@ export default function DockNavbar() {
 
   const writerNavLinks = [
     { name: "Home", href: "/writer" },
+    { name: "Books", href: "/writer/books" },
     { name: "Poetries", href: "/writer/poetries" },
     { name: "Blogs", href: "/writer/blogs" },
     { name: "Contact", href: "/writer#wcontact" },

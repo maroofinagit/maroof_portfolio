@@ -7,7 +7,6 @@ import { FaBookOpen } from "react-icons/fa";
 import { Montserrat } from "next/font/google";
 import type { Blog } from "@/types/blog";
 import { urlFor } from "@/lib/sanity";
-import blog from "../../maroof-portfolio-cms/schemaTypes/blog";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 

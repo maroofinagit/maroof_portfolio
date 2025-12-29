@@ -7,29 +7,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Montserrat } from "next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import books from "@/data/BookData";
 
 
 const montserrat = Montserrat({
     subsets: ["latin"]
 });
 
-const upcomingBooks = [
-    {
-        title: "Barkat",
-        description:
-            "A novel which explores the idea of divine blessing through a modern love story where a girl enters a boy’s life not as a distraction, but as barkat turning his restlessness into peace and his ordinary days into grace",
-        status: "Writing in progress",
-        release: "Expected Monsoon 2026",
-        cover: "/barkatcover.jpg",
-    },
-    {
-        title: "Jayeza",
-        description: "“Jayeza” ~ A poetry collection that explores the idea of self-reflection through verses woven with love, loss, and faith where every poem becomes a mirror, turning silence into meaning and ordinary emotions into grace.",
-        status: "Editing phase",
-        release: "Expected Spring 2026",
-        cover: "/jaizacover.jpg",
-    },
-];
 
 const promoPoetry = [
     {
@@ -150,7 +134,7 @@ export default function ComingSoon() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {upcomingBooks.map((book, index) => (
+                        {books.map((book, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
@@ -163,7 +147,7 @@ export default function ComingSoon() {
                                     <div className="grid grid-cols-2 gap-4 items-center justify-between">
                                         <div className="relative w-full md:h-96 h-36 rounded-xl overflow-hidden">
                                             <Image
-                                                src={book.cover}
+                                                src={book.coverImage}
                                                 alt={book.title}
                                                 fill
                                                 className="object-contain object-center"
@@ -172,7 +156,6 @@ export default function ComingSoon() {
                                         <div className=" flex-col flex gap-1 text-center">
                                             <h1 className=" text-2xl md:text-3xl font-semibold text-center text-[#562e00]">{book.title}</h1>
                                             <p className=" text-sm md:text-base mt-2">{book.status}</p>
-                                            <p className=" text-sm md:text-base font-medium">{book.release}</p>
                                         </div>
                                     </div>
 

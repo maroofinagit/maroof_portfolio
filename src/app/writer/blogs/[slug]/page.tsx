@@ -3,7 +3,6 @@ import BlogDetail from "@/components/BlogDetail";
 import { client, urlFor } from "@/lib/sanity";
 import { Blog } from "@/types/blog";
 import { Metadata } from "next";
-import React from "react";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
