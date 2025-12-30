@@ -20,7 +20,7 @@ const books: Book[] = [
             "/jayezacover2.jpg",
             "/jayezacover3.jpg",
         ],
-        status: "Comming Soon in January 2026",
+        status: "Coming Soon in January 2026",
     },
     {
         _id: "2",

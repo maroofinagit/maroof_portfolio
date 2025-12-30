@@ -13,7 +13,7 @@ export default function BookDetail({ book }: { book: Book }) {
 
     return (
         <section
-            className={`relative mt-20 min-h-screen w-full px-6 md:px-16 py-16 text-[#733f01] font-serif ${montserrat.className}`}
+            className={`relative mt-20 min-h-screen w-full md:px-16 py-16 text-[#733f01] font-serif ${montserrat.className}`}
         >
             {/* Background */}
             <div
@@ -23,12 +23,12 @@ export default function BookDetail({ book }: { book: Book }) {
             <div className="fixed inset-0 bg-white/60 backdrop-blur-xs z-[-1]" />
 
             {/* CONTENT */}
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14">
+            <div className="max-w-7xl px-8 grid grid-cols-1 md:grid-cols-2 gap-14">
 
                 {/* LEFT — IMAGE GALLERY */}
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center gap-y-10">
                     {/* Main Image */}
-                    <div className="relative h-[26rem] aspect-square bg-black/15 rounded-xs overflow-hidden shadow-2xl">
+                    <div className="relative min-h-80 md:h-[26rem] aspect-[3/4] md:aspect-square bg-black/15 rounded-xs overflow-hidden shadow-2xl">
                         <Image
                             src={activeImage}
                             alt={book.title}
@@ -40,13 +40,13 @@ export default function BookDetail({ book }: { book: Book }) {
 
                     {/* Thumbnails */}
                     {book.previewImages && (
-                        <div className="flex gap-4 mt-6">
+                        <div className="flex gap-x-2 md:gap-x-4 w-full justify-center">
                             {[book.coverImage, ...book.previewImages].map(
                                 (img, i) => (
                                     <button
                                         key={i}
                                         onClick={() => setActiveImage(img)}
-                                        className={`relative w-20 aspect-[11/17] rounded-md overflow-hidden border transition
+                                        className={`relative w-24 aspect-[11/17] rounded-md overflow-hidden border transition
                                         ${activeImage === img
                                                 ? "border-[#733f01]"
                                                 : "border-transparent hover:border-[#733f01]/40"
@@ -66,39 +66,39 @@ export default function BookDetail({ book }: { book: Book }) {
                 </div>
 
                 {/* RIGHT — BOOK DETAILS */}
-                <div className="flex flex-col justify-center">
-                    <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
+                <div className="flex flex-col justify-center gap-y-8">
+                    <h1 className="text-2xl md:text-4xl font-semibold leading-tight">
                         {book.title}
                     </h1>
 
-                    <p className="mt-6 text-base tracking-wide leading-relaxed text-[#5c3200]">
+                    <p className="text-sm md:text-base tracking-wide leading-relaxed text-[#5c3200]">
                         {book.description}
                     </p>
 
                     {/* Price */}
-                    <div className="mt-8 text-2xl font-semibold">
+                    <div className="text-2xl font-semibold">
                         ₹{book.price}
                     </div>
 
                     {/* Metadata */}
-                    <div className="mt-10 flex gap-4">
+                    <div className="flex">
                         {book.status == 'published' ?
                             <button
-                                className="px-8 py-2 bg-[#733f01] text-white rounded-md hover:bg-[#5c3200] transition"
+                                className="px-8 py-2 text-sm md:text-base bg-[#733f01] text-white rounded-md hover:bg-[#5c3200] transition"
                             >
                                 Buy Now
                             </button> :
-                            <span className="px-4 py-2 bg-[#733f01] text-white hover:bg-[#5c3200] rounded-md font-medium">
+                            <span className="px-4 py-2 text-sm md:text-base bg-[#733f01] text-white hover:bg-[#5c3200] rounded-md font-medium">
                                 {book.status}
                             </span>
                         }
                     </div>
 
-                    <h2 className="mt-12 text-2xl font-semibold">
+                    <h2 className="mt-8 text-2xl font-semibold">
                         Book Details :
                     </h2>
 
-                    <div className="mt-8 space-y-2 text-sm">
+                    <div className="space-y-2 text-sm">
 
                         <p>
                             <span className="font-semibold">Language:</span>{" "}
@@ -125,11 +125,11 @@ export default function BookDetail({ book }: { book: Book }) {
                         )}
 
                         {book.longDescription && (
-                            <div className="mt-6">
+                            <div className="mt-8">
                                 <h3 className="text-xl font-semibold mb-4">
                                     About this book:
                                 </h3>
-                                <p className=" tracking-wide whitespace-pre-line leading-relaxed text-[#5c3200]">
+                                <p className="text-sm tracking-wide whitespace-pre-line leading-relaxed text-[#5c3200]">
                                     {book.longDescription}
                                 </p>
                             </div>

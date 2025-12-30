@@ -39,7 +39,7 @@ export default function BooksClient({ books }: BooksListProps) {
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="max-w-3xl mx-auto text-center font-medium mb-14 text-lg md:text-xl text-[#4e2b00] italic"
+                className="max-w-3xl mx-auto text-center font-medium mb-14 text-base md:text-xl text-[#4e2b00] italic"
             >
                 Explore my collection of published works, from heartfelt poetry to
                 captivating novels. Each book is a journey into themes of love, faith,
@@ -58,7 +58,7 @@ export default function BooksClient({ books }: BooksListProps) {
                                 key={book._id}
                                 whileHover={{ scale: 1.02 }}
                                 exit={{ opacity: 0 }}
-                                className="relative flex flex-col md:flex-row w-full p-6 rounded-2xl border border-[#E0D4B7] shadow-inner backdrop-blur-md bg-white/30 hover:bg-white/50 transition-all duration-300 justify-between gap-x-4"
+                                className="relative flex flex-col md:flex-row w-full p-6 rounded-2xl border border-[#E0D4B7] shadow-inner backdrop-blur-md bg-white/30 hover:bg-white/50 transition-all duration-300 justify-center gap-x-4 gap-y-4"
                             >
                                 <FaBookOpen
                                     size={22}
@@ -66,26 +66,26 @@ export default function BooksClient({ books }: BooksListProps) {
                                 />
 
                                 {/* LEFT — BOOK COVER */}
-                                <div className="relative md:w-1/2 h-64 md:h-96 flex-shrink-0 rounded-xl overflow-hidden">
+                                <div className="relative md:w-1/4 h-64 md:h-96 md:aspect-[11/17] flex-shrink-0 rounded-xl overflow-hidden border border-[#D3C4A3] shadow-md">
                                     <Image
                                         src={book.coverImage}
                                         alt={book.title}
                                         fill
-                                        className="object-contain object-left"
+                                        className="object-contain md:object-cover"
                                     />
                                 </div>
 
                                 {/* RIGHT — BOOK INFO */}
-                                <div className="flex flex-col justify-center md:pl-6 w-full">
-                                    <h2 className="text-2xl font-bold mb-3 text-[#583000]">
+                                <div className="flex flex-col justify-center md:pl-6 gap-y-4">
+                                    <h2 className=" text-xl md:text-2xl font-bold text-[#583000]">
                                         {book.title}
                                     </h2>
 
-                                    <p className=" text-gray-700 whitespace-pre-line tracking-wider mb-4">
+                                    <p className=" text-gray-700 text-xs md:text-base whitespace-pre-line tracking-wider">
                                         {book.description}
                                     </p>
 
-                                    <p className="font-semibold text-[#703c00] mb-6">
+                                    <p className="font-semibold text-[#703c00]">
                                         ₹{book.price}
                                     </p>
 
