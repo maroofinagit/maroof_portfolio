@@ -13,4 +13,6 @@ export interface Book {
     binding?: string;
     previewImages?: string[];
     status?: string;
+    amazonLink?: string;
+    flipkartLink?: string;
 }
