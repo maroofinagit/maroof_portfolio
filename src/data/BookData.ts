@@ -20,7 +20,10 @@ const books: Book[] = [
             "/jayezacover2.jpg",
             "/jayezacover3.jpg",
         ],
-        status: "Coming Soon in January 2026",
+        // status: "Coming Soon in January 2026",
+        status: "published",
+        amazonLink: "https://www.amazon.in",
+        flipkartLink: "https://www.flipkart.com",
     },
     {
         _id: "2",
@@ -42,6 +45,8 @@ const books: Book[] = [
             "/barkatcover3.jpg",
         ],
         status: "Coming Soon in Monsoon 2026",
+        amazonLink: "https://www.amazon.in/",
+        flipkartLink: "https://www.flipkart.com/",
     },
 ];
 

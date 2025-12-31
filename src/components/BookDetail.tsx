@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import { Book } from "@/types/book";
+import Link from "next/link";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -81,18 +82,49 @@ export default function BookDetail({ book }: { book: Book }) {
                     </div>
 
                     {/* Metadata */}
-                    <div className="flex">
-                        {book.status == 'published' ?
-                            <button
-                                className="px-8 py-2 text-sm md:text-base bg-[#733f01] text-white rounded-md hover:bg-[#5c3200] transition"
-                            >
-                                Buy Now
-                            </button> :
-                            <span className="px-4 py-2 text-sm md:text-base bg-[#733f01] text-white hover:bg-[#5c3200] rounded-md font-medium">
+                    <div className="flex flex-col gap-4">
+                        {book.status === "published" ? (
+                            <>
+                                {/* Primary CTA — Buy Now */}
+                                <button
+                                    className="w-fit px-8 py-3 text-sm md:text-base bg-[#733f01] text-white rounded-md hover:bg-[#5c3200] transition"
+                                >
+                                    Buy Now
+                                </button>
+
+                                {/* Secondary CTAs — Marketplace */}
+                                <div className="flex flex-wrap gap-4">
+                                    {book.amazonLink && (
+                                        <Link
+                                            href={book.amazonLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-6 py-2 text-sm md:text-base border border-[#733f01] text-[#733f01] rounded-md hover:bg-[#733f01] hover:text-white transition"
+                                        >
+                                            Buy from Amazon
+                                        </Link>
+                                    )}
+
+                                    {book.flipkartLink && (
+                                        <Link
+                                            href={book.flipkartLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-6 py-2 text-sm md:text-base border border-[#733f01] text-[#733f01] rounded-md hover:bg-[#733f01] hover:text-white transition"
+                                        >
+                                            Buy from Flipkart
+                                        </Link>
+                                    )}
+                                </div>
+                            </>
+                        ) : (
+                            <span className="px-4 py-2 text-sm md:text-base bg-[#733f01] text-white rounded-md font-medium w-fit">
                                 {book.status}
                             </span>
-                        }
+                        )}
                     </div>
+
+
 
                     <h2 className="mt-8 text-2xl font-semibold">
                         Book Details :
