@@ -94,7 +94,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1 }}
             className="flex justify-center md:justify-start space-x-6 text-2xl text-white"
           >
-            <a href="https://linkedin.com/maroofalysyed" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/maroofalysyed" target="_blank" rel="noreferrer">
               <FaLinkedin />
             </a>
             <a href="https://github.com/maroofinagit" target="_blank" rel="noreferrer">

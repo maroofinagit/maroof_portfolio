@@ -3,6 +3,7 @@ export interface Book {
     _id: string;
     title: string;
     slug: string;
+    shortDescription: string;
     description: string;
     longDescription?: string;
     language?: string;

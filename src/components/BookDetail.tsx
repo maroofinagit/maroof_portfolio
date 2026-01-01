@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google";
 import { Book } from "@/types/book";
 import Link from "next/link";
 
+
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 
@@ -29,7 +30,7 @@ export default function BookDetail({ book }: { book: Book }) {
                 {/* LEFT — IMAGE GALLERY */}
                 <div className="flex flex-col items-center gap-y-10">
                     {/* Main Image */}
-                    <div className="relative min-h-80 md:h-[26rem] aspect-[3/4] md:aspect-square bg-black/15 rounded-xs overflow-hidden shadow-2xl">
+                    <div className="relative min-h-80 md:h-[26rem] aspect-[3/4] md:aspect-square bg-black/15 rounded-sm overflow-hidden shadow-2xl">
                         <Image
                             src={activeImage}
                             alt={book.title}
@@ -78,7 +79,7 @@ export default function BookDetail({ book }: { book: Book }) {
 
                     {/* Price */}
                     <div className="text-2xl font-semibold">
-                        ₹{book.price}
+                        ₹ {book.price}
                     </div>
 
                     {/* Metadata */}
@@ -87,7 +88,7 @@ export default function BookDetail({ book }: { book: Book }) {
                             <>
                                 {/* Primary CTA — Buy Now */}
                                 <button
-                                    className="w-fit px-8 py-3 text-sm md:text-base bg-[#733f01] text-white rounded-md hover:bg-[#5c3200] transition"
+                                    className="w-fit px-6 font-medium py-2 text-sm md:text-base bg-[#733f01] text-white rounded-md hover:bg-[#5c3200] transition"
                                 >
                                     Buy Now
                                 </button>
@@ -99,7 +100,7 @@ export default function BookDetail({ book }: { book: Book }) {
                                             href={book.amazonLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="px-6 py-2 text-sm md:text-base border border-[#733f01] text-[#733f01] rounded-md hover:bg-[#733f01] hover:text-white transition"
+                                            className="px-4 md:px-6 py-2 font-medium text-sm md:text-base border border-[#733f01] text-[#733f01] rounded-md hover:bg-[#733f01] hover:text-white transition"
                                         >
                                             Buy from Amazon
                                         </Link>
@@ -110,7 +111,7 @@ export default function BookDetail({ book }: { book: Book }) {
                                             href={book.flipkartLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="px-6 py-2 text-sm md:text-base border border-[#733f01] text-[#733f01] rounded-md hover:bg-[#733f01] hover:text-white transition"
+                                            className="px-4 md:px-6 py-2 font-medium text-sm md:text-base border border-[#733f01] text-[#733f01] rounded-md hover:bg-[#733f01] hover:text-white transition"
                                         >
                                             Buy from Flipkart
                                         </Link>

@@ -8,6 +8,7 @@ import { Montserrat } from "next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import books from "@/data/BookData";
+import Link from "next/link";
 
 
 const montserrat = Montserrat({
@@ -24,8 +25,8 @@ const promoPoetry = [
     },
     {
         book: "Jayeza",
-        content: `Baad din bhar roze ke niwale cheen liye mun se,
-                Ab dawat bhi mil jaye pr bhook kahaan se lagegi...`
+        content: `Tanha khaamoshiyon mein shor dhoondha karo,
+        Mahfilon ke mazaaq achche nahi hote...`
     },
 ]
 
@@ -155,14 +156,22 @@ export default function ComingSoon() {
                                         </div>
                                         <div className=" flex-col flex gap-1 text-center">
                                             <h1 className=" text-2xl md:text-3xl font-semibold text-center text-[#562e00]">{book.title}</h1>
-                                            <p className=" text-sm md:text-base mt-2">{book.status}</p>
+                                            <p className=" text-sm md:text-base mt-2">
+                                                {book.status == "published" ? "Published" : `${book.status}`}
+                                            </p>
                                         </div>
                                     </div>
 
                                     {/* Description */}
-                                    <p className="text-[#562e00] mt-3 text-sm md:text-base font-medium">
-                                        {book.description}
+                                    <p className="text-[#562e00] mt-3 text-sm md:text-base tracking-wide ">
+                                        {book.shortDescription}
                                     </p>
+
+                                    <button className=" px-4 py-2 mt-2 w-fit bg-[#733f01] text-white rounded-md hover:bg-[#5c3200] transition cursor-pointer text-sm md:text-base font-medium">
+                                        <Link href="/writer/books">
+                                            Explore All Books
+                                        </Link>
+                                    </button>
                                 </div>
 
 
