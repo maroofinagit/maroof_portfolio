@@ -88,7 +88,7 @@ export default function BookDetail({ book }: { book: Book }) {
                             <>
                                 {/* Primary CTA — Buy Now */}
                                 <button
-                                    className="w-fit px-6 font-medium py-2 text-sm md:text-base bg-[#733f01] text-white rounded-md hover:bg-[#5c3200] transition"
+                                    className="w-fit px-6 cursor-pointer font-medium py-2 text-sm md:text-base bg-[#733f01] text-white rounded-md hover:bg-[#5c3200] transition"
                                 >
                                     Buy Now
                                 </button>

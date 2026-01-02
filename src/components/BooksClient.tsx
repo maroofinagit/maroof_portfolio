@@ -90,7 +90,7 @@ export default function BooksClient({ books }: BooksListProps) {
                                     </p>
 
                                     <Link href={`/writer/books/${book.slug}`}>
-                                        <button className="px-4 py-2 rounded-md text-sm bg-transparent border border-[#733f01] font-medium shadow hover:bg-[#733f01] hover:text-white transition-all duration-300">
+                                        <button className="px-4 py-2 cursor-pointer rounded-md text-sm bg-transparent border border-[#733f01] font-medium shadow hover:bg-[#733f01] hover:text-white transition-all duration-300">
                                             View Book →
                                         </button>
                                     </Link>
