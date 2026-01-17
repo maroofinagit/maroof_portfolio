@@ -1,4 +1,4 @@
-# Project Name
+# Maroof's Portfolio
 
 A full-stack web application built as part of my portfolio to demonstrate clean architecture, modern web development practices, and real-world feature implementation.
 
@@ -15,7 +15,7 @@ This repository contains an **earlier stable version** of the project.
 Active development, feature expansion, and production updates are currently ongoing in a **private repository**.  
 This public version is intentionally kept unchanged to preserve portfolio consistency and reference integrity.
 
-👉 **Live Demo:** <YOUR_DEPLOYED_SITE_URL>
+👉 **Live Demo:** https://maroofalysyed.vercel.app
 
 ---
 
