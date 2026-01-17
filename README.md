@@ -1,37 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Name
 
-## Getting Started
+A full-stack web application built as part of my portfolio to demonstrate clean architecture, modern web development practices, and real-world feature implementation.
 
-First, run the development server:
+This repository represents a **stable snapshot** of the project that was publicly shared for portfolio and resume review.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚧 Current Status
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+⚠️ **Important Note**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This repository contains an **earlier stable version** of the project.
 
-## Learn More
+Active development, feature expansion, and production updates are currently ongoing in a **private repository**.  
+This public version is intentionally kept unchanged to preserve portfolio consistency and reference integrity.
 
-To learn more about Next.js, take a look at the following resources:
+👉 **Live Demo:** <YOUR_DEPLOYED_SITE_URL>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧠 Project Overview
 
-## Deploy on Vercel
+- Designed and developed as a production-style web application
+- Focus on performance, scalability, and clean UI/UX
+- Implements real-world flows such as authentication, data handling, and user interactions
+- Built with a modular and maintainable codebase
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# maroof_portfolio
+## 🛠 Tech Stack
+
+### Frontend
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+
+### Backend
+- Next.js API Routes
+- Node.js
+
+### Database & ORM
+- PostgreSQL
+- Prisma ORM
+
+### Authentication
+- Custom authentication flow / Auth library
+
+### Payments (if applicable)
+- Razorpay integration
+
+### Deployment
+- Deployed on <Vercel / Netlify / etc.>
+
+---
+
+## ✨ Key Features
+
+- Responsive and accessible UI
+- Server-side rendering and optimized routing
+- Secure authentication and authorization
+- Database-driven dynamic content
+- Clean folder structure and reusable components
+
+---
+
+## 📌 Purpose of This Repository
+
+- Portfolio demonstration
+- Resume and project references
+- Code quality and architectural review
+
+For the latest production version, additional features, and internal improvements, development continues privately.
+
+---
+
+## 📬 Contact
+
+If you’d like to discuss this project or its architecture, feel free to reach out.
+
+**Author:** Maroof Ali Syed  
